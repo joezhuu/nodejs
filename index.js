@@ -5,9 +5,9 @@ var qr = require('qr-image');
 var path = require("path");
 var mongo = require('mongodb'); 
 
-app.get('/1', (req, res) => res.sendFile(path.join('C:/Users/Joe/myapp','found1.html')))
-app.get('/2', (req, res) => res.sendFile(path.join('C:/Users/Joe/myapp','found2.html')))
-app.get('/3', (req, res) => res.sendFile(path.join('C:/Users/Joe/myapp','found3.html')))
+app.get('/1', (req, res) => res.sendFile(path.join(__dirname,'found1.html')))
+app.get('/2', (req, res) => res.sendFile(path.join(__dirname,,'found2.html')))
+app.get('/3', (req, res) => res.sendFile(path.join(__dirname,,'found3.html')))
 app.get('/4', (req, res) => res.send(req.connection.remoteAddress))
 
 router.get('/qr/:text', function(req,res){
